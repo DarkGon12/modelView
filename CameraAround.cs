@@ -7,11 +7,11 @@ public class CameraAround : MonoBehaviour
 	[SerializeField] private Transform _objectContainers;
 	[SerializeField] private Transform _model;
 
-	[Header("Джойстики")]
+	[Header("Г„Г¦Г®Г©Г±ГІГЁГЄГЁ")]
 	[SerializeField] private FixedJoystick _fixJoy;
 	[SerializeField] private DynamicJoystick _dynamicJoy;
 
-	[Header("Настройки камеры")]
+	[Header("ГЌГ Г±ГІГ°Г®Г©ГЄГЁ ГЄГ Г¬ГҐГ°Г»")]
 	[Range(0.2f, 4f)]
 	[SerializeField] private float _sensitivity; 
 	[Range(1,90)]
@@ -69,9 +69,9 @@ public class CameraAround : MonoBehaviour
 		{
 			if (offset.z < -2f)
 			{
-				targetOffset = Vector3.Lerp(targetOffset, transform.localRotation * offset + _model.position, 0.01f);
-				offset.z = Mathf.Lerp(offset.z, -1.85f, 0.01f);
-				yield return new WaitForSeconds(0.002f);
+				targetOffset = Vector3.Lerp(targetOffset, transform.localRotation * offset + _model.position, 0.03f);
+				offset.z = Mathf.Lerp(offset.z, -1.85f, 0.03f);
+				yield return new WaitForSeconds(0.0001f);
 			}
 			else
 			{
